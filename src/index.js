@@ -1,13 +1,15 @@
 import express from "express";
 import cors from "cors";
 import userRoutes from "./routes/userRoutes.js";
+import productRoutes from "./routes/productRoute.js";
 import sequelize from "./config/database.js";
 
 const app = express();
 const PORT = 3000;
 
 app.use(express.json());
-app.use("/api/users", userRoutes);
+app.use("/api", userRoutes);
+app.use("/api", productRoutes);
 
 app.use(cors({ origin: "*" }));
 
