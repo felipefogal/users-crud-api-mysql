@@ -15,11 +15,20 @@ const User = sequelize.define("User", {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
-  documento: {
+  tipo_documento: {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  nro_documento:{
+    type: DataTypes.BIGINT,
+    allowNull: false,
+    unique: true,
+  },
   telefone: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  endereco: {
     type: DataTypes.STRING,
     allowNull: false,
   },
