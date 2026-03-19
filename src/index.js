@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import userRoutes from "./routes/userRoutes.js";
 import productRoutes from "./routes/productRoute.js";
+import orderRoutes from "./routes/orderRoute.js";
 import sequelize from "./config/database.js";
 
 const app = express();
@@ -10,6 +11,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use("/api", userRoutes);
 app.use("/api", productRoutes);
+app.use("/api", orderRoutes);
 
 app.use(cors({ origin: "*" }));
 
