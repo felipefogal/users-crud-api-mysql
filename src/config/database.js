@@ -19,7 +19,7 @@ import dotenv from "dotenv/config.js";
 // });
 /* Conexão AWS */
 
-/*Conexão local*/
+/*Conexão local utilizando MySQL Workbench*/
 const sequelize = new Sequelize(process.env.DB_LOCAL_NAME, process.env.DB_LOCAL_USER, process.env.DB_LOCAL_PASSWORD, {
   host: 'localhost',
   dialect: 'mysql'
