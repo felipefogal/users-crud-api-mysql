@@ -1,7 +1,7 @@
 import { Sequelize } from "sequelize";
 import dotenv from "dotenv/config.js";
 
-// /* Conexão AWS */
+/* Conexão AWS */
 // const dbName = process.env.DB_NAME;
 // const dbUser = process.env.DB_USER;
 // const dbPassword = process.env.DB_PASSWORD;
@@ -17,9 +17,9 @@ import dotenv from "dotenv/config.js";
 //     idle: 10000, // Desconexão após 10s de inatividade
 //   },
 // });
-// /* Conexão AWS */
+/* Conexão AWS */
 
-/*Conexão local*/
+/*Conexão local utilizando MySQL Workbench*/
 const sequelize = new Sequelize(process.env.DB_LOCAL_NAME, process.env.DB_LOCAL_USER, process.env.DB_LOCAL_PASSWORD, {
   host: 'localhost',
   dialect: 'mysql'

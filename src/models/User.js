@@ -20,7 +20,7 @@ const User = sequelize.define("User", {
     allowNull: false,
   },
   nro_documento:{
-    type: DataTypes.BIGINT,
+    type: DataTypes.STRING,
     allowNull: false,
     unique: true,
   },
