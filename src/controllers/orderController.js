@@ -1,7 +1,5 @@
-import Order from "../models/Order.js";
+import Order from "../models/OrderRequest.js";
 
-
-// Preciso criar o Swagger
 export const getOrders = async (req, res) => {
   try {
     const order = await Order.findAll();
