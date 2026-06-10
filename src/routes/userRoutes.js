@@ -50,6 +50,25 @@ router.get("/users", getUsers);
  */
 router.get("/users/:id", getUserById);
 router.get("/users/name/:name", getUserByName);
+
+/**
+ * @swagger
+ * /users/email/{email}:
+ *   get:
+ *     summary: Obtém um usuário pelo email
+ *     tags: [Users]
+ *     parameters:
+ *       - in: path
+ *         name: email
+ *         schema:
+ *           type: string
+ *         required: true
+ *     responses:
+ *       200:
+ *         description: Usuário encontrado
+ *       404:
+ *         description: Usuário não encontrado
+ */
 router.get("/users/email/:email", getUserByEmail);
 
 /**

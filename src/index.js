@@ -18,7 +18,13 @@ app.use("/api", orderRoutes);
 // Swagger
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-app.use(cors({ origin: "*" }));
+app.use(
+  cors({
+    origin: "http://127.0.0.1:8080",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization", "Access-Control-Allow-Origin"],
+  }),
+);
 
 sequelize
   .sync()
